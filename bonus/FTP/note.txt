@@ -1,0 +1,8 @@
+pour tester que ftp fonctionne
+dans la machine hote:
+ftp localhost
+se connecter avec le user (www-data)
+et le mot de passe (atad-www)
+et tester les commandes normales, ls cd pwd
+puis essayer de creer un fichier/dosser, le supprimer
+verifier si ca change bien dans la machine hote et dans le container wordpress

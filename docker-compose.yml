@@ -23,9 +23,9 @@
         context: mariadb
         dockerfile: Dockerfile
         args:
-          DB_NAME: ${DB_NAME}
-          DB_USER: ${DB_USER}
-          DB_PASSWORD: ${DB_PASSWORD}
+          - DB_NAME=${DB_NAME}
+          - DB_USER=${DB_USER}
+          - DB_PASSWORD=${DB_PASSWORD}
       env_file: .env
       volumes:
         - mariadb:/var/lib/mysql
@@ -70,6 +70,32 @@
       restart: on-failure
       expose:
         - "9001"
+    ftp:
+      container_name: ftp-server
+      networks:
+        - inception
+      build:
+        context: bonus/FTP
+        dockerfile: Dockerfile
+        args:
+          - FTP_PW=${FTP_PW}
+      env_file: .env
+      volumes:
+        - wordpress:/var/www/ftp/wordpress
+      restart: on-failure
+      ports:
+        - "21:21"
+        - "21000-21010:21000-21010"
+    static-site:
+      container_name: static-site
+      networks:
+        - inception
+      build:
+        context: bonus/static-site
+        dockerfile: Dockerfile
+      restart: on-failure
+      expose:
+        - "80"
   volumes:
     wordpress:
       driver: local
