@@ -1,0 +1,6 @@
+pour tester le fonctionnement de redis cache
+il faut entrer dans le container redis
+et entrer redis-cli
+la commande ping pour verifier si c'est bien connecté
+et la commande key* pour lister les clés stockées
+la commande get {une clé} montre la valeur de cette clé

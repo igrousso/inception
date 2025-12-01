@@ -1,0 +1,6 @@
+pour se connecter à adminer:
+
+sur le navigateur, ajouter /adminer/ ou /adminer apres igrousso.42.fr
+puis rentrer le port de la base de donner (mariadb:3306)
+l'admin (db-admin)
+et le mot de passe (nimda-bd)
