@@ -1,6 +1,0 @@
-entrer dans le container mariadb
-executer mariadb
-SHOW DATABASES; pour lister les bases de données
-USE wordpress; pour rentrer dans la database wordpress
-SHOW TABLES; pour lister les tables
-DESCRIBE {une table}; pour montrer le detail de la table
