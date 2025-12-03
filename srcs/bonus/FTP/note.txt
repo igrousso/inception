@@ -4,5 +4,6 @@ ftp localhost
 se connecter avec le user (www-data)
 et le mot de passe (atad-www)
 et tester les commandes normales, ls cd pwd
-puis essayer de creer un fichier/dosser, le supprimer
+puis essayer de creer un dosser, le supprimer
+essayer d'ajouter un fichier deja existant (put)
 verifier si ca change bien dans la machine hote et dans le container wordpress

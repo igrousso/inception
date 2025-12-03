@@ -10,4 +10,3 @@ COPY script.sh /
 RUN chmod +x script.sh
 
 ENTRYPOINT ["/script.sh"]
-# ENTRYPOINT ["bash", "-c", "tail -f /dev/null"]

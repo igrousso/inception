@@ -8,6 +8,7 @@ volume:
 	mkdir -p $(VOLUME_DIR)/mariadb
 	mkdir -p $(VOLUME_DIR)/wordpress
 	mkdir -p $(VOLUME_DIR)/adminer
+	mkdir -p $(VOLUME_DIR)/portainer
 
 up:
 	docker compose -p $(PROJECT_NAME) -f $(DOCKER_COMPOSE) up -d
@@ -25,9 +26,11 @@ fclean: clean
 	docker volume rm mariadb
 	docker volume rm wordpress
 	docker volume rm adminer
+	docker volume rm portainer
 	sudo rm -rf $(VOLUME_DIR)/mariadb
 	sudo rm -rf $(VOLUME_DIR)/wordpress
 	sudo rm -rf $(VOLUME_DIR)/adminer
+	sudo rm -rf $(VOLUME_DIR)/portainer
 
 re: clean up
 

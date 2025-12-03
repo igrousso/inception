@@ -27,4 +27,3 @@ RUN wp core download --allow-root
 RUN mkdir -p /run/php
 
 ENTRYPOINT ["/script.sh"]
-# ENTRYPOINT ["bash", "-c", "tail -f /dev/null"]
