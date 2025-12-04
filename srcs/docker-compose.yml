@@ -7,6 +7,7 @@ services:
       - inception
     depends_on:
       - wordpress
+      - portainer
     build:
       context: nginx
       dockerfile: Dockerfile
@@ -112,7 +113,7 @@ services:
       - portainer:/data
     restart: on-failure
     expose:
-      - "9443"
+      - "9000"
 
 volumes:
   wordpress:
