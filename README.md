@@ -27,13 +27,25 @@ cd inception
 
 ## Utilisation
 
+### Lancer les services
+
 ```bash
 make
-https://igrousso.42.fr pour wordpress
-https://igrousso.42.fr/adminer/ pour adminer
-https://static.igrousso.42.fr pour le site static
-https://portainer.igrousso.42.fr pour portainer
 ```
+
+### Accéder aux services (via navigateur)
+
+- WordPress : https://igrousso.42.fr
+- Adminer : https://igrousso.42.fr/adminer/
+- Site statique : https://static.igrousso.42.fr
+- Portainer : https://portainer.igrousso.42.fr
+
+### Accès aux services non web
+
+Certaines services ne s ont pas accessibles via un navigateur:
+
+- Redis : accès via CLI (redis-cli)
+- FTP : connexion via un client FTP (ex: FileZilla)
 
 ## Architecture du Projet
 
